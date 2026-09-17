@@ -47,6 +47,8 @@
       details, saved locations, reminders, questionnaire answers, japa and meditation history — stays in the app's
       private storage on your device, and is deleted when you uninstall the app.</p>
     <p>The app contains no analytics, advertising or crash-reporting library, and no network client of its own.</p>
+    <p>If you buy <strong>Vedic Mitra Pro</strong>, Google Play sells it and handles the payment. The app learns only
+      whether Pro is owned, and remembers that on your device.</p>
   </section>
 
   <h2>What the app stores, and where</h2>
@@ -62,6 +64,8 @@
         <tr><td>Japa and meditation session history</td><td>Streaks and progress</td></tr>
         <tr><td>Ayurveda questionnaire answers and result, and whether its notice was accepted</td><td>Showing the result again, per profile, until you change or delete it</td></tr>
         <tr><td>Theme, colour and calendar-reckoning preferences</td><td>Remembering how you like the app to work</td></tr>
+        <tr><td>Whether Vedic Mitra Pro is unlocked</td><td>Keeping Pro working offline once Google Play has confirmed the purchase</td></tr>
+        <tr><td>PDF reports you ask for (temporary files)</td><td>Handing a kundali or match report to the app you share it with; cleared from the app's cache after a day</td></tr>
       </tbody>
     </table>
   </div>
@@ -81,8 +85,14 @@
     <li><strong>Internet</strong> (<code>INTERNET</code>) — used for one thing: Android's own <code>Geocoder</code>
       service, when you search for a city by name while adding a location. That lookup is performed by the operating
       system, not by this app, and is subject to your device vendor's privacy policy. If it fails, the app carries on
-      and you can enter coordinates directly. <strong>No other feature uses the network.</strong> Time-zone
-      resolution, the ephemeris and the whole panchanga engine run offline.</li>
+      and you can enter coordinates directly. <strong>No other feature of the app uses the network.</strong>
+      Time-zone resolution, the ephemeris and the whole panchanga engine run offline. Purchases are handled by the
+      Google Play Store app on your device, which contacts Google itself.</li>
+    <li><strong>Google Play billing</strong> (<code>com.android.vending.BILLING</code>) — lets the app ask the Google
+      Play Store app to show its purchase sheet for Vedic Mitra Pro, and to say whether your Google account owns it.
+      You enter payment details in Google Play, never in the app. The app receives no payment details: only whether
+      the purchase is complete or pending, and a purchase token it hands back to Google Play to confirm the
+      purchase.</li>
     <li><strong>Motion sensors</strong> — the Vastu compass reads the phone's orientation sensor while the compass is
       open, to show a bearing. The readings are used on the spot and are neither stored nor sent.</li>
     <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>) — to show the reminders you create.</li>
@@ -92,6 +102,18 @@
     <li><strong>Boot completed</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — to restore your scheduled reminders
       after a restart, so they are not silently lost.</li>
   </ul>
+
+  <h2>Buying Vedic Mitra Pro</h2>
+  <p>Pro is sold by Google Play, under the Google Play Terms of Service and Google's privacy policy. Google processes
+    the payment and keeps the order. As the seller, the developer can see the order records Google Play gives every
+    seller, such as order numbers, products, prices, dates and countries, and uses them only for accounting, refunds
+    and answering questions about a purchase. The developer never receives card, bank or UPI details. Refunds and
+    cancellations follow Google Play's policies.</p>
+
+  <h2>Sharing a report</h2>
+  <p><strong>Share as PDF</strong>, on the kundali and matchmaking screens, writes a report to the app's cache on your
+    device and opens Android's share sheet. The report goes only where you choose to send it; after that, the
+    receiving app's own privacy policy applies. The app keeps no record of where it went.</p>
 
   <h2>What the app does not do</h2>
   <ul>
@@ -104,14 +126,11 @@
   </ul>
 
   <h2>Links that leave the app</h2>
-  <p>The About and Support screens link to GitHub, LinkedIn, GitHub Sponsors and Ko-fi, and to this policy. Tapping
-    one opens your browser and hands you to that service, where <strong>its</strong> privacy policy applies and this one
-    stops. The app learns nothing about whether you followed a link, or what you did next, including whether you
-    donated.</p>
+  <p>The About screen links to GitHub and LinkedIn, and the Support screen to this policy. Tapping one opens your
+    browser and hands you to that service, where <strong>its</strong> privacy policy applies and this one stops. The app
+    learns nothing about whether you followed a link, or what you did next.</p>
   <p><strong>Report a bug</strong> opens your email app with a message addressed to the developer. Nothing is sent
     unless you send it, and what you write is handled only to answer you.</p>
-  <p>The Support screen's UPI option copies a payment address to your clipboard. It initiates no payment and contacts
-    no payment provider; anything after the copy happens in your own UPI app.</p>
 
   <h2>Children</h2>
   <p>Vedic Mitra is not directed at children, and collects no data from anyone, including children.</p>
@@ -119,11 +138,13 @@
   <h2>Your rights</h2>
   <p>Because nothing leaves your device, the developer holds no data of yours to access, export, correct or erase. To
     delete everything the app holds, clear the app's storage or uninstall it. If you have emailed the developer and
-    want that correspondence deleted, ask at the address below.</p>
+    want that correspondence deleted, ask at the address below. Records of a purchase are held by Google; see them,
+    or ask for a refund, through Google Play.</p>
 
   <h2>Third-party components</h2>
-  <p>The app is built on open-source libraries and, where Google Play services is present, Google's Play services
-    Location library for the optional location feature. None of them is configured to send data to the developer.</p>
+  <p>The app is built on open-source libraries; where Google Play services is present, Google's Play services Location
+    library for the optional location feature; and the Google Play Billing Library, to buy and restore Vedic Mitra
+    Pro. None of them is configured to send data to the developer.</p>
 
   <h2>Changes to this policy</h2>
   <p>When this policy changes, the effective date above changes with it, and the new version is published at the same
